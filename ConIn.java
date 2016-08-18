@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
-public class ConIn {
+public class Calculator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,7 +16,7 @@ class MyFrame extends JFrame implements ActionListener{
 	double zongxuefen=0;
 	double zongchengji=0;
 	double rrr=0;
-	ArrayList<Porject> al= new ArrayList<Porject>();
+	ArrayList<Subject> al= new ArrayList<Subject>();
 	JPanel jp,jpp;
 	JTextField jt1,jt2;
 	JLabel jl,xuefen,chengji,result;
@@ -67,7 +67,7 @@ class MyFrame extends JFrame implements ActionListener{
 			if(!(jt1.getText().equals("")||jt2.getText().equals(""))){
 				double a=Double.parseDouble(jt1.getText());
 				double b=Double.parseDouble(jt2.getText());
-				Porject p=new Porject(a, b);
+				Subject p=new Subject(a, b);
 				al.add(p);
 				
 				zongxuefen+=a;
@@ -82,7 +82,7 @@ class MyFrame extends JFrame implements ActionListener{
 			}
 			
 		}else if(e.getSource()==qingkong){
-			al=new ArrayList<Porject>();
+			al=new ArrayList<Subject>();
 			 zongxuefen=0;
 			 zongchengji=0;
 			 rrr=0;
@@ -95,11 +95,11 @@ class MyFrame extends JFrame implements ActionListener{
 	
 }
 
-class Porject{
+class Subject{
 	double xuefen;
 	double chengji;
 	double all;
-	public Porject(double xuefen,double chengji) {
+	public Subject(double xuefen,double chengji) {
 		// TODO Auto-generated constructor stub
 		this.xuefen=xuefen;
 		this.chengji=chengji;
