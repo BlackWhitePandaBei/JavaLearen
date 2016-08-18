@@ -2,7 +2,6 @@ package com.suanshu;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-
 import javax.swing.*;
 public class ConIn {
 
@@ -27,16 +26,16 @@ class MyFrame extends JFrame implements ActionListener{
 	public MyFrame() {
 		// TODO Auto-generated constructor stub
 		
-		qingkong=new JButton("Çå¿Õ");
+		qingkong=new JButton("æ¸…ç©º");
 		qingkong.addActionListener(this);
-		jl=new JLabel("ÒÑÌí¼Ó¿ÆÄ¿ÊıÁ¿£º"+al.size()+"");
+		jl=new JLabel("å·²æ·»åŠ ç§‘ç›®æ•°é‡ï¼š"+al.size()+"");
 		jp=new JPanel();
-		xuefen=new JLabel("Ñ§·Ö:");
-		chengji =new JLabel("³É¼¨:");
+		xuefen=new JLabel("å­¦åˆ†:");
+		chengji =new JLabel("æˆç»©:");
 		jt1=new JTextField(7);
 
 		jt2=new JTextField(7);
-		tianjia=new JButton("Ìí¼Ó");
+		tianjia=new JButton("æ·»åŠ ");
 		tianjia.addActionListener(this);
 		jp.add(xuefen);
 		jp.add(jt1);
@@ -46,8 +45,8 @@ class MyFrame extends JFrame implements ActionListener{
 		jp.add(tianjia);
 		jp.add(jl);
 		
-		result=new JLabel("Æ½¾ùÑ§·Ö¼¨Îª£º");
-		result.setFont(new Font("ËÎÌå",Font.PLAIN,38));
+		result=new JLabel("å¹³å‡å­¦åˆ†ç»©ä¸ºï¼š");
+		result.setFont(new Font("å®‹ä½“",Font.PLAIN,38));
 		jp.add(result);
 		this.add(jp);
 		
@@ -57,7 +56,7 @@ class MyFrame extends JFrame implements ActionListener{
 		this.setSize(400,180);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setVisible(true);
-		this.setTitle("Æ½¾ùÑ§·Ö¼¨¼ÆËãÆ÷");
+		this.setTitle("å¹³å‡å­¦åˆ†ç»©è®¡ç®—å™¨");
 
 	}
 
@@ -79,7 +78,7 @@ class MyFrame extends JFrame implements ActionListener{
 				jt2.setText("");
 				
 			}else{
-				System.out.println("ÇëÌîÈëÊı×Ö");
+				System.out.println("è¯·å¡«å…¥æ•°å­—");
 			}
 			
 		}else if(e.getSource()==qingkong){
@@ -89,8 +88,8 @@ class MyFrame extends JFrame implements ActionListener{
 			 rrr=0;
 		}
 		
-		jl.setText("ÒÑÌí¼Ó¿ÆÄ¿ÊıÁ¿£º"+al.size()+"");
-		result.setText("Æ½¾ùÑ§·Ö¼¨Îª£º"+rrr);
+		jl.setText("å·²æ·»åŠ ç§‘ç›®æ•°é‡ï¼š"+al.size()+"");
+		result.setText("å¹³å‡å­¦åˆ†ç»©ä¸ºï¼š"+rrr);
 		this.validate();
 	}
 	
